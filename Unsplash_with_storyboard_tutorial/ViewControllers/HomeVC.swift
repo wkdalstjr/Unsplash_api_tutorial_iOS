@@ -110,7 +110,7 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
         // 화면이동
         self.performSegue(withIdentifier: segueId, sender: self)
     }
-
+    // 푸시되는지 실험하는 주석입니다. 삭제 바랍니다. 
     @objc func keyboardWillShowHandle(notification: NSNotification){
         print("HomeVC - keyboardWillShow() called")
         // 키보드 사이즈 가져오기
