@@ -8,8 +8,9 @@
 
 import UIKit
 import Toast_Swift
+import Alamofire
 
-class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate {
+class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var searchFilterSegment: UISegmentedControl!
     
@@ -51,6 +52,14 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
             guard let userInputValue = self.searchBar.text else { return }
             
             nextVC.vcTitle = userInputValue + " 🙍🏻‍♂️"
+            
+        case SEGUE_ID.PHOTO_COLLECTION_VC:
+        // 다음 화면의 뷰컨트롤러를 가져온다.
+        let nextVC = segue.destination as! PhotoCollectionVC
+        
+        guard let userInputValue = self.searchBar.text else { return }
+        
+        nextVC.vcTitle = userInputValue + " 🏞"
             
         default:
             print("defalut")
@@ -142,8 +151,46 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
     @IBAction func onSearchButtonClicked(_ sender: UIButton) {
         print("HomeVC - onSearchButtonClicked() called / Selectedindex : \(searchFilterSegment.selectedSegmentIndex)")
         
+//        let url = API.BASE_URL + "search/photos"
+//
+          guard let userInput = self.searchBar.text else { return }
+//
+//        // 키, 밸류 형식의 딕셔너리
+//        let queryParam = ["query" : userInput, "client_id" : API.CLIENT_ID ]
+//
+//        AF.request(url, method: .get, parameters: queryParam).responseJSON(completionHandler: {
+//            response in debugPrint(response)
+//        })
+        
+        var urlToCall : URLRequestConvertible?
+        
+        switch searchFilterSegment.selectedSegmentIndex {
+        case 0:
+            urlToCall = MySearchRouter.searchPhotos(term: userInput)
+        case 1:
+            urlToCall = MySearchRouter.searchUsers(term: userInput)
+        default:
+            print("defalut")
+        }
+        
+        if let urlConvertible = urlToCall {
+            MyAlamofireManager
+                .shared
+                .session
+                .request(urlConvertible)
+                .validate(statusCode: 200..<401)
+                .responseJSON(completionHandler: {
+                response in
+                   // debugPrint(response)
+            })
+        }
+        
+        
+        
+        
+        
         // 화면으로 이동
-        pushVC()
+        //pushVC()
     }
     @IBAction func searchFilterValueChanged(_ sender: UISegmentedControl) {
      //   print("HomeVC - searchFilterValueChanged() called / index : \(sender.selectedSegmentIndex)")

@@ -17,6 +17,11 @@
 		D0CE9D89274E0B2300496511 /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE9D88274E0B2300496511 /* PhotoCollectionVC.swift */; };
 		D0CE9D8D274E27A100496511 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE9D8C274E27A100496511 /* Constants.swift */; };
 		D0CE9D8F274E28CA00496511 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE9D8E274E28CA00496511 /* BaseVC.swift */; };
+		D0DAF6AC274F5AEA00B94A18 /* MyAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DAF6AB274F5AEA00B94A18 /* MyAlamofireManager.swift */; };
+		D0DAF6AE274F5BB600B94A18 /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DAF6AD274F5BB600B94A18 /* BaseInterceptor.swift */; };
+		D0DAF6B0274F5ECD00B94A18 /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DAF6AF274F5ECD00B94A18 /* MyLogger.swift */; };
+		D0DAF6B2274F5FE300B94A18 /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DAF6B1274F5FE300B94A18 /* MyApiStatusLogger.swift */; };
+		D0DAF6B4274F60BF00B94A18 /* MySearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DAF6B3274F60BF00B94A18 /* MySearchRouter.swift */; };
 		DC309EE19AF97964C25AD427 /* Pods_Unsplash_with_storyboard_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795FD20C544F10670CC6951B /* Pods_Unsplash_with_storyboard_tutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +41,11 @@
 		D0CE9D88274E0B2300496511 /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
 		D0CE9D8C274E27A100496511 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0CE9D8E274E28CA00496511 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		D0DAF6AB274F5AEA00B94A18 /* MyAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlamofireManager.swift; sourceTree = "<group>"; };
+		D0DAF6AD274F5BB600B94A18 /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
+		D0DAF6AF274F5ECD00B94A18 /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
+		D0DAF6B1274F5FE300B94A18 /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
+		D0DAF6B3274F60BF00B94A18 /* MySearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,7 @@
 		D0CE9D71274E082200496511 /* Unsplash_with_storyboard_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D0DAF6AA274F5ACF00B94A18 /* API */,
 				D0CE9D8B274E278900496511 /* Utils */,
 				D0CE9D72274E082200496511 /* AppDelegate.swift */,
 				D0CE9D74274E082200496511 /* SceneDelegate.swift */,
@@ -103,9 +114,9 @@
 		D0CE9D8A274E1D2000496511 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0CE9D76274E082200496511 /* HomeVC.swift */,
 				D0CE9D88274E0B2300496511 /* PhotoCollectionVC.swift */,
 				D0CE9D86274E0AD400496511 /* UserListVC.swift */,
-				D0CE9D76274E082200496511 /* HomeVC.swift */,
 				D0CE9D8E274E28CA00496511 /* BaseVC.swift */,
 			);
 			path = ViewControllers;
@@ -117,6 +128,18 @@
 				D0CE9D8C274E27A100496511 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D0DAF6AA274F5ACF00B94A18 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D0DAF6AB274F5AEA00B94A18 /* MyAlamofireManager.swift */,
+				D0DAF6B3274F60BF00B94A18 /* MySearchRouter.swift */,
+				D0DAF6AD274F5BB600B94A18 /* BaseInterceptor.swift */,
+				D0DAF6AF274F5ECD00B94A18 /* MyLogger.swift */,
+				D0DAF6B1274F5FE300B94A18 /* MyApiStatusLogger.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +259,14 @@
 			files = (
 				D0CE9D77274E082200496511 /* HomeVC.swift in Sources */,
 				D0CE9D73274E082200496511 /* AppDelegate.swift in Sources */,
+				D0DAF6AE274F5BB600B94A18 /* BaseInterceptor.swift in Sources */,
 				D0CE9D75274E082200496511 /* SceneDelegate.swift in Sources */,
+				D0DAF6B4274F60BF00B94A18 /* MySearchRouter.swift in Sources */,
 				D0CE9D87274E0AD400496511 /* UserListVC.swift in Sources */,
+				D0DAF6AC274F5AEA00B94A18 /* MyAlamofireManager.swift in Sources */,
+				D0DAF6B2274F5FE300B94A18 /* MyApiStatusLogger.swift in Sources */,
 				D0CE9D89274E0B2300496511 /* PhotoCollectionVC.swift in Sources */,
+				D0DAF6B0274F5ECD00B94A18 /* MyLogger.swift in Sources */,
 				D0CE9D8F274E28CA00496511 /* BaseVC.swift in Sources */,
 				D0CE9D8D274E27A100496511 /* Constants.swift in Sources */,
 			);
