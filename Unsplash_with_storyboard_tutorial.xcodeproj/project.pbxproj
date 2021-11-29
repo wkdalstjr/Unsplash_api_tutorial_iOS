@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00A1EC2275454B900477F90 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A1EC1275454B900477F90 /* Photo.swift */; };
+		D00A1EC42754550300477F90 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A1EC32754550300477F90 /* MyError.swift */; };
 		D0CE9D73274E082200496511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE9D72274E082200496511 /* AppDelegate.swift */; };
 		D0CE9D75274E082200496511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE9D74274E082200496511 /* SceneDelegate.swift */; };
 		D0CE9D77274E082200496511 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE9D76274E082200496511 /* HomeVC.swift */; };
@@ -29,6 +31,8 @@
 		0C2BAA0AF204A6114B4C3372 /* Pods-Unsplash_with_storyboard_tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplash_with_storyboard_tutorial.debug.xcconfig"; path = "Target Support Files/Pods-Unsplash_with_storyboard_tutorial/Pods-Unsplash_with_storyboard_tutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		6D740C18AFDC1F0C3E0357DF /* Pods-Unsplash_with_storyboard_tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplash_with_storyboard_tutorial.release.xcconfig"; path = "Target Support Files/Pods-Unsplash_with_storyboard_tutorial/Pods-Unsplash_with_storyboard_tutorial.release.xcconfig"; sourceTree = "<group>"; };
 		795FD20C544F10670CC6951B /* Pods_Unsplash_with_storyboard_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unsplash_with_storyboard_tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00A1EC1275454B900477F90 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		D00A1EC32754550300477F90 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		D0CE9D6F274E082200496511 /* Unsplash_with_storyboard_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplash_with_storyboard_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CE9D72274E082200496511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0CE9D74274E082200496511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D00A1EC0275454A000477F90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D00A1EC1275454B900477F90 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D0CE9D66274E082200496511 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +110,7 @@
 		D0CE9D71274E082200496511 /* Unsplash_with_storyboard_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D00A1EC0275454A000477F90 /* Model */,
 				D0DAF6AA274F5ACF00B94A18 /* API */,
 				D0CE9D8B274E278900496511 /* Utils */,
 				D0CE9D72274E082200496511 /* AppDelegate.swift */,
@@ -126,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				D0CE9D8C274E27A100496511 /* Constants.swift */,
+				D00A1EC32754550300477F90 /* MyError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -263,7 +277,9 @@
 				D0CE9D75274E082200496511 /* SceneDelegate.swift in Sources */,
 				D0DAF6B4274F60BF00B94A18 /* MySearchRouter.swift in Sources */,
 				D0CE9D87274E0AD400496511 /* UserListVC.swift in Sources */,
+				D00A1EC2275454B900477F90 /* Photo.swift in Sources */,
 				D0DAF6AC274F5AEA00B94A18 /* MyAlamofireManager.swift in Sources */,
+				D00A1EC42754550300477F90 /* MyError.swift in Sources */,
 				D0DAF6B2274F5FE300B94A18 /* MyApiStatusLogger.swift in Sources */,
 				D0CE9D89274E0B2300496511 /* PhotoCollectionVC.swift in Sources */,
 				D0DAF6B0274F5ECD00B94A18 /* MyLogger.swift in Sources */,

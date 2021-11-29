@@ -44,7 +44,7 @@ enum MySearchRouter : URLRequestConvertible {
     
     var parameters : [String: String] {
         switch self {
-        case let .searchPhotos(term), let .searchUsers(term):
+        case let .searchUsers(term), let .searchPhotos(term):
             return ["query" : term]
         }
     }
